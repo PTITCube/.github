@@ -44,7 +44,9 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 - 🎥 **Video 2.1:** Giới thiệu về Hệ thống Nguồn trên vệ tinh.
 - 📖 **Doc 2.1:** Tổng quan hệ thống Nguồn (Pin, Mạch sạc, Chuyển đổi điện áp).
 - 🎥 **Video 2.2:** Cách chuyển đổi giá trị điện áp Analog.
-- 💻 **Thực hành:** `Lab2-01_Detect_Battery_Voltage` - Đọc và tính toán phần trăm pin vệ tinh.
+- 💻 **Thực hành:** 
+  - `Lab2-01a_Battery_GPIO`: Đọc điện áp pin bằng ADC (Analog).
+  - `Lab2-01b_Battery_Library`: Tính toán phần trăm pin vệ tinh (Dùng thư viện PTITCube).
 - 📖 **Doc 2.2:** Quản lý rủi ro sụt áp và các chế độ ngủ.
 - 💻 **Thực hành:** `Lab2-02_Power_Saving` - Kích hoạt chế độ ngủ sâu tiết kiệm năng lượng.
 - 📝 **Tổng hợp Lab 2:** Nắm vững cách quản lý, tối ưu và tiết kiệm điện năng cho vệ tinh.
@@ -58,7 +60,8 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 - 📖 **Doc 3.1:** Giao thức giao tiếp nối tiếp và kiến trúc hệ thống tập tin.
 - 🎥 **Video 3.2:** Thao tác đọc/ghi file an toàn, tránh hỏng thẻ nhớ.
 - 💻 **Thực hành:** 
-  - `Lab3-01_Save_To_MicroSD`: Ghi dữ liệu cảm biến giả lập xuống thẻ nhớ.
+  - `Lab3-01a_MicroSD_SPI`: Giao tiếp thẻ nhớ bằng thư viện SD gốc (SPI thô).
+  - `Lab3-01b_MicroSD_Library`: Ghi log dữ liệu tự động (Dùng thư viện PTITCube).
   - `Lab3-02_Linux_FS_Commands`: Xây dựng hệ thống lệnh quản lý file qua máy tính.
 - 📝 **Tổng hợp Lab 3:** Cấu hình thành công hộp đen lưu trữ dữ liệu liên tục cho vệ tinh.
 
@@ -70,16 +73,23 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 - 🎥 **Video 4.1:** Giới thiệu tổng quan về hệ thống Cảm biến và Máy ảnh trên vệ tinh.
 - 📖 **Doc 4.1:** Nguyên lý hoạt động và giao tiếp truyền dữ liệu của các cảm biến qua mạng I2C.
 - 🎥 **Video 4.2:** Tương tác với cảm biến nhiệt độ và áp suất.
-- 💻 **Thực hành:** `Lab4-01_Detect_Environment`
+- 💻 **Thực hành:** 
+  - `Lab4-01a_Environment_I2C`: Đọc cảm biến BMP280 bằng giao tiếp I2C.
+  - `Lab4-01b_Environment_Library`: Tối ưu hóa đọc dữ liệu cảm biến môi trường.
 - 🎥 **Video 4.3:** Tương tác với cảm biến gia tốc và đo góc nghiêng.
-- 💻 **Thực hành:** `Lab4-02_Detect_IMU_Attitude`
+- 💻 **Thực hành:** 
+  - `Lab4-02a_IMU_I2C`: Đọc thanh ghi thô MPU6050/6500 bằng I2C.
+  - `Lab4-02b_IMU_Library`: Tính toán góc nghiêng vệ tinh (Attitude).
 - 🎥 **Video 4.4:** Tương tác và lấy dữ liệu tọa độ từ module định vị.
 - 📖 **Doc 4.2:** Trích xuất và phân tích định dạng dữ liệu thô trả về từ module định vị.
-- 💻 **Thực hành:** `Lab4-03_Detect_GPS_Rawdata`
+- 💻 **Thực hành:** 
+  - `Lab4-03a_GPS_UART`: Đọc dữ liệu chuẩn NMEA thô từ module qua UART.
+  - `Lab4-03b_GPS_Library`: Bóc tách tọa độ kinh tuyến, vĩ tuyến tự động.
 - 🎥 **Video 4.5:** Tương tác, gửi lệnh chụp ảnh và thu thập hình ảnh từ module Máy ảnh.
 - 💻 **Thực hành:** 
-  - `Lab4-04_Camera_Snapshot`
-  - `Lab4-05_Read_All_Sensors` (Tổng hợp đọc tất cả cảm biến)
+  - `Lab4-04a_Camera_UART`: Gửi tập lệnh điều khiển máy ảnh qua UART.
+  - `Lab4-04b_Camera_Library`: Chụp ảnh và hiển thị về màn hình.
+  - `Lab4-05_Read_All_Sensors`: Tổng hợp đọc tất cả cảm biến.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ thống thu thập dữ liệu đa cảm biến toàn diện.
 
 ---
@@ -92,8 +102,10 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 - 🎥 **Video 5.2:** Hướng dẫn cấu hình các tham số vật lý của sóng vô tuyến.
 - 📖 **Doc 5.2:** Đóng gói bản tin và kiến trúc Trạm mặt đất.
 - 💻 **Thực hành:** 
-  - `Lab5-01_Send_Telemetry`: Phát bản tin chứa dữ liệu cảm biến.
-  - `Lab5-02_Receive_Command`: Nhận lệnh từ Trái Đất và phản hồi.
+  - `Lab5-01a_Send_Telemetry_UART`: Cấu hình thanh ghi LoRa và phát dữ liệu qua UART.
+  - `Lab5-01b_Send_Telemetry_Library`: Đóng gói packet Telemetry hoàn chỉnh.
+  - `Lab5-02a_Receive_Command_UART`: Lắng nghe chuỗi dữ liệu thô.
+  - `Lab5-02b_Receive_Command_Library`: Giải mã lệnh (Command) từ Trái Đất.
 - 🎥 **Video 5.3:** Xây dựng Trạm mặt đất để thu phát tín hiệu.
 - 💻 **Thực hành:** `Lab5-03_Ground_Station_Demo`
 - 📝 **Tổng hợp Lab 5:** Thiết lập thành công luồng giao tiếp vô tuyến hai chiều giữa vệ tinh và mặt đất.
