@@ -107,7 +107,7 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
   - `Lab5-02a_Receive_Command_UART`: Lắng nghe chuỗi dữ liệu thô.
   - `Lab5-02b_Receive_Command_Library`: Giải mã lệnh (Command) từ Trái Đất.
 - 🎥 **Video 5.3:** Xây dựng Trạm mặt đất để thu phát tín hiệu.
-- 💻 **Thực hành:** `Lab5-03_Ground_Station_Demo`
+- 💻 **Thực hành:** `Lab5-03_Satellite_Comm_System`
 - 📝 **Tổng hợp Lab 5:** Thiết lập thành công luồng giao tiếp vô tuyến hai chiều giữa vệ tinh và mặt đất.
 
 ---
