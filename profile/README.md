@@ -58,7 +58,7 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 ---
 
 ## Lab 3: Xử lý Dữ liệu và Lệnh (C&DH)
-**🎯 Mục tiêu:** Giao tiếp với thẻ nhớ để ghi nhận dữ liệu.
+**🎯 Mục tiêu:** Giao tiếp với thẻ nhớ để ghi nhận dữ liệu, chuyển đổi sang lập trình đa nhiệm và bảo vệ hệ thống bằng Bộ định thời.
 
 - 🎥 **Video 3.1:** Giới thiệu về Hệ thống Lưu trữ dữ liệu dự phòng trên vệ tinh.
 - 📖 **Doc 3.1:** Giao thức giao tiếp nối tiếp và kiến trúc hệ thống tập tin.
@@ -67,7 +67,14 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
   - `Lab3-01a_MicroSD_SPI`: Giao tiếp thẻ nhớ bằng thư viện SD gốc (SPI thô).
   - `Lab3-01b_MicroSD_Library`: Ghi log dữ liệu tự động (Dùng thư viện PTITCube).
   - `Lab3-02_Linux_FS_Commands`: Xây dựng hệ thống lệnh quản lý file qua máy tính.
-- 📝 **Tổng hợp Lab 3:** Cấu hình thành công hộp đen lưu trữ dữ liệu liên tục cho vệ tinh.
+- 🎥 **Video 3.3:** Tại sao phần mềm vệ tinh cần Hệ điều hành?
+- 📖 **Doc 3.2:** Khái niệm cơ bản về Tác vụ, Độ ưu tiên và Bộ điều phối trong Hệ điều hành Thời gian thực.
+- 📖 **Doc 3.3:** Tranh chấp tài nguyên và cơ chế khóa bảo vệ.
+- 💻 **Thực hành:** `Lab3-03_Multitasking_Scheduler` - Chạy song song nháy đèn, đọc cảm biến, gửi thông tin.
+- 🎥 **Video 3.4:** Thực hành gỡ lỗi treo hệ thống bằng Bộ định thời.
+- 📖 **Doc 3.4:** Bộ định thời Watchdog Timer trong hàng không vũ trụ.
+- 💻 **Thực hành:** `Lab3-04_Watchdog_And_Event` - Kích hoạt tự động khởi động lại hệ thống khi bị treo.
+- 📝 **Tổng hợp Lab 3:** Cấu hình thành công hộp đen lưu trữ dữ liệu và đảm bảo độ tin cậy cho phần mềm bay.
 
 ---
 
@@ -119,19 +126,12 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 ---
 
 ## Lab 6: Phân hệ Cấu trúc (Structure)
-**🎯 Mục tiêu:** Lắp ráp khung vệ tinh, chuyển đổi sang lập trình đa nhiệm, sử dụng cơ chế khóa và Bộ định thời bảo vệ vệ tinh không bị treo.
+**🎯 Mục tiêu:** Lắp ráp khung vệ tinh, hiểu về vật liệu và cấu trúc cơ khí bảo vệ vệ tinh trong không gian.
 
 - 🎥 **Video 6.1:** Giới thiệu về cơ khí và cấu trúc bảo vệ vệ tinh.
 - 📖 **Doc 6.1:** Khái quát về vật liệu và cấu trúc cơ khí của vệ tinh.
 - 🎥 **Video 6.2:** Hướng dẫn lắp ráp khung vệ tinh cơ khí.
-- 🎥 **Video 6.3:** Tại sao phần mềm vệ tinh cần Hệ điều hành?
-- 📖 **Doc 6.2:** Khái niệm cơ bản về Tác vụ, Độ ưu tiên và Bộ điều phối trong Hệ điều hành Thời gian thực.
-- 📖 **Doc 6.3:** Tranh chấp tài nguyên và cơ chế khóa bảo vệ.
-- 💻 **Thực hành:** `Lab6-01_Multitasking_Scheduler` - Chạy song song nháy đèn, đọc cảm biến, gửi thông tin.
-- 🎥 **Video 6.4:** Thực hành gỡ lỗi treo hệ thống bằng Bộ định thời.
-- 📖 **Doc 6.4:** Bộ định thời Watchdog Timer trong hàng không vũ trụ.
-- 💻 **Thực hành:** `Lab6-02_Watchdog_And_Event` - Kích hoạt tự động khởi động lại hệ thống khi bị treo.
-- 📝 **Tổng hợp Lab 6:** Hoàn thiện bộ khung vật lý và đảm bảo độ tin cậy tuyệt đối cho phần mềm bay.
+- 📝 **Tổng hợp Lab 6:** Hoàn thiện bộ khung vật lý cho vệ tinh.
 
 ---
 
