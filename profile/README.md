@@ -26,14 +26,18 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 - 📖 **Doc 1.2:** Hướng dẫn sử dụng Web IDE tích hợp.
 - 💻 **Thực hành:** 
   - `Lab1-01_Blink_LED`: Nhấp nháy đèn LED để kiểm tra bo mạch.
-  - `Lab1-02_Serial_Communication`: Gửi và nhận dữ liệu từ máy tính.
-  - `Lab1-03_Serial_Control_LED`: Điều khiển LED bằng lệnh gửi từ máy tính.
+  - `Lab1-02_Control_Multiple_LEDs`: Điều khiển nhiều đèn LED (hiệu ứng đèn chạy/tuần tự).
+  - `Lab1-03_Button`: Đọc trạng thái nút nhấn cơ bản (Digital Input).
+  - `Lab1-04_LED_Button`: Nút nhấn điều khiển bật/tắt đèn LED.
+  - `Lab1-05_7_Segment_LED`: Hiển thị số đếm trên LED 7 đoạn.
+  - `Lab1-06_Serial_Communication`: Gửi và nhận dữ liệu từ máy tính qua Serial.
+  - `Lab1-07_Serial_Control_LED`: Điều khiển LED bằng lệnh gửi từ máy tính.
 - 🎥 **Video 1.3:** Giới thiệu về kết nối WiFi và Máy chủ Web.
 - 📖 **Doc 1.3:** Lý thuyết về Máy chủ Web và giao thức truyền tải.
 - 💻 **Thực hành:**
-  - `Lab1-04_WiFi_Connection`: Kết nối vào mạng WiFi có sẵn.
-  - `Lab1-05_WiFi_AP_Mode`: Phát WiFi từ vệ tinh.
-  - `Lab1-06_Web_Server_LED`: Dựng máy chủ điều khiển LED qua trình duyệt.
+  - `Lab1-08_WiFi_Connection`: Kết nối vào mạng WiFi có sẵn.
+  - `Lab1-09_WiFi_AP_Mode`: Phát WiFi từ vệ tinh.
+  - `Lab1-10_Web_Server_LED`: Dựng máy chủ điều khiển LED qua trình duyệt.
 - 📝 **Tổng hợp Lab 1:** Hoàn thiện kỹ năng lập trình cơ bản và kết nối mạng cho vi điều khiển chính.
 
 ---
