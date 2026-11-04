@@ -94,6 +94,8 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
   - `Lab4-04a_Camera_UART`: Gửi tập lệnh điều khiển máy ảnh qua UART.
   - `Lab4-04b_Camera_Library`: Chụp ảnh và hiển thị về màn hình.
   - `Lab4-05_Read_All_Sensors`: Tổng hợp đọc tất cả cảm biến.
+- 🎥 **Video 4.6:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung UART.
+- 💻 **Thực hành:** `Lab4-06_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng Multiplexer.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ thống thu thập dữ liệu đa cảm biến toàn diện.
 
 ---
@@ -134,16 +136,14 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 ---
 
 ## Lab 7: Tích hợp Hệ thống & Nhiệm vụ
-**🎯 Mục tiêu:** Lắp ráp toàn bộ các module đã học để hình thành một phần mềm bay hoàn thiện. Giải quyết các bài toán xung đột phần cứng.
+**🎯 Mục tiêu:** Lắp ráp toàn bộ các module đã học để hình thành một phần mềm bay hoàn thiện.
 
 - 🎥 **Video 7.1:** Giới thiệu về bài toán Tích hợp Hệ thống trên vệ tinh.
-- 📖 **Doc 7.1:** Kỹ thuật ghép kênh bằng IC phần cứng.
-- 💻 **Thực hành:** `Lab7-01_Camera_Multiplexer` - Chuyển mạch luân phiên phần cứng.
+- 📖 **Doc 7.1:** Kiến trúc phân lớp phần mềm Vệ tinh toàn diện.
 - 🎥 **Video 7.2:** Phân tích luồng dữ liệu của Phần mềm bay tổng hợp.
-- 📖 **Doc 7.2:** Kiến trúc phân lớp phần mềm Vệ tinh toàn diện.
 - 💻 **Thực hành:** 
-  - `Lab7-02_Full_Satellite_Program` (Phiên bản vòng lặp tuần tự)
-  - `Lab7-03_RTOS_Satellite_System` (Phiên bản chạy hệ điều hành đa nhiệm)
+  - `Lab7-01_Full_Satellite_Program` (Phiên bản vòng lặp tuần tự)
+  - `Lab7-02_RTOS_Satellite_System` (Phiên bản chạy hệ điều hành đa nhiệm)
 - 📝 **Tổng hợp Lab 7:** Vệ tinh đã tích hợp hoàn chỉnh và sẵn sàng cho chuyến bay thử nghiệm thực tế.
 
 ---
