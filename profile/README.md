@@ -43,14 +43,14 @@ Dưới đây là cấu trúc lộ trình học tập dành cho học viên. M�
 ---
 
 ## Lab 2: Phân hệ Năng lượng (EPS)
-**🎯 Mục tiêu:** Quản lý năng lượng, đọc điện áp pin, và các chế độ tiết kiệm pin trên không gian.
+**🎯 Mục tiêu:** Quản lý năng lượng, đọc điện áp và dung lượng pin với IC MAX17048 qua I2C, và các chế độ tiết kiệm pin trên không gian.
 
-- 🎥 **Video 2.1:** Giới thiệu về Hệ thống Nguồn trên vệ tinh.
-- 📖 **Doc 2.1:** Tổng quan hệ thống Nguồn (Pin, Mạch sạc, Chuyển đổi điện áp).
-- 🎥 **Video 2.2:** Cách chuyển đổi giá trị điện áp Analog.
+- 🎥 **Video 2.1:** Giới thiệu về Hệ thống Nguồn trên vệ tinh (Pin Li-ion, Mạch sạc, IC Fuel Gauge).
+- 📖 **Doc 2.1:** Tổng quan hệ thống Nguồn (Pin, IC đo dung lượng MAX17048 qua I2C, Mạch sạc).
+- 🎥 **Video 2.2:** Giao tiếp I2C với IC Fuel Gauge MAX17048.
 - 💻 **Thực hành:** 
-  - `Lab2-01a_Battery_GPIO`: Đọc điện áp pin bằng ADC (Analog).
-  - `Lab2-01b_Battery_Library`: Tính toán phần trăm pin vệ tinh (Dùng thư viện PTITCube).
+  - `Lab2-01a_Battery_I2C`: Đọc điện áp và dung lượng pin với MAX17048 (I2C thuần qua Wire.h).
+  - `Lab2-01b_Battery_Library`: Quản lý phân hệ nguồn EPS (Dùng thư viện PTITCube).
 - 📖 **Doc 2.2:** Quản lý rủi ro sụt áp và các chế độ ngủ.
 - 💻 **Thực hành:** `Lab2-02_Power_Saving` - Kích hoạt chế độ ngủ sâu tiết kiệm năng lượng.
 - 📝 **Tổng hợp Lab 2:** Nắm vững cách quản lý, tối ưu và tiết kiệm điện năng cho vệ tinh.
