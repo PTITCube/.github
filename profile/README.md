@@ -152,8 +152,8 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 📖 **Doc 4.5:** Nguyên lý Cảm biến Ảnh Màu CMOS 2 Megapixel OV2640, Bộ Nén Phần Cứng JPEG & Kỹ thuật Lập trình Gửi Lệnh Cấu hình, Nhận Khối Byte Ảnh JPEG qua UART.
 - ❓ **Câu hỏi kiểm tra Doc 4.5:** Trắc nghiệm cấu tạo ma trận điểm ảnh CMOS, vai trò đường xung nhịp ngoài XCLK (10-20MHz), cơ chế nén JPEG phần cứng và cặp byte đánh dấu bắt đầu/kết thúc ảnh (`0xFFD8` / `0xFFD9`).
 - 💻 **Thực hành Component Camera OV2640:** 
-  - `Lab4-04a_Camera_UART`: Gửi tập lệnh cấu hình thanh ghi và bắt đầu phiên chụp ảnh từ Camera OV2640.
-  - `Lab4-04b_Camera_Library`: Thu nhận khối byte ảnh JPEG nén phần cứng và hiển thị lên màn hình.
+  - `Lab4-04a_Camera_UART`: Giao tiếp bắt tay UART thuần (`p` -> `SIZE` -> `OK` -> stream -> `DONE`) với module ESP32-CAM và ghi trực tiếp luồng byte ảnh JPEG vào thẻ nhớ MicroSD qua bus SPI.
+  - `Lab4-04b_Camera_Library`: Sử dụng thư viện PTITCube (`PTIT_Camera`) chụp ảnh và tự động quản lý lưu trữ vào thẻ nhớ MicroSD qua hàm tiện ích cấp cao.
 - ❓ **Câu hỏi kiểm tra Thực hành Camera OV2640:** Trắc nghiệm phân tích gói lệnh cấu hình chụp ảnh, cơ chế đệm nhận luồng byte ảnh nhị phân qua UART và lưu trữ dữ liệu ảnh vào bộ nhớ.
 - 📖 **Doc 4.6:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
 - ❓ **Câu hỏi kiểm tra Doc 4.6:** Trắc nghiệm kiến trúc chu trình vòng lặp cảm biến tập trung, chiến lược đồng bộ dấu thời gian (Timestamping) và phân bổ chu kỳ lấy mẫu cho từng loại cảm biến.
