@@ -80,10 +80,10 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
   - `Lab2-01a_Battery_I2C`: Đọc trực tiếp thanh ghi điện áp và dung lượng pin MAX17048 qua thư viện `Wire.h`.
   - `Lab2-01b_Battery_Library`: Quản lý phân hệ nguồn EPS thông qua lớp thư viện PTITCube đóng gói cấp cao.
 - ❓ **Câu hỏi kiểm tra Thực hành Nguồn & MAX17048:** Trắc nghiệm phân tích code ghép 2 byte nhị phân thành số nguyên 16-bit, công thức nhân hệ số phân giải $78.125\mu\text{V}$, hàm đóng gói `myEPS.getVoltage()` và phương pháp phát hiện pin yếu.
-- 📖 **Doc 2.2:** Nguyên lý Ngắt An toàn Phóng (Chốt RBF, Công tắc Hành trình chân ray), Mạch Giám sát Sụt áp Brownout & Nguyên lý Điều Khiển Mạch Hạ Áp (Buck Converter) Cấp Nguồn Cảm Biến, Kỹ Thuật Power Gating Tối Ưu Hóa Năng Lượng Quỹ Đạo.
-- ❓ **Câu hỏi kiểm tra Doc 2.2:** Trắc nghiệm vai trò công tắc hành trình ray phóng, chốt RBF, mạch Reset Brownout BOD và kỹ thuật Power Gating khống chế dòng ra vào mạch hạ áp để cắt dòng tiêu thụ của khối cảm biến.
-- 💻 **Thực hành Component Tiết Kiệm Điện:** `Lab2-02_Power_Saving` - Lập trình điều khiển bật/tắt dòng ra vào mạch hạ áp (Buck Converter) cấp nguồn cho cụm cảm biến theo chu kỳ (Power Gating), tối ưu hóa dòng tiêu thụ trên quỹ đạo.
-- ❓ **Câu hỏi kiểm tra Thực hành Tiết Kiệm Điện:** Trắc nghiệm phân tích khối code điều khiển chân Enable mạch hạ áp, khoảng thời gian chờ ổn định điện áp đầu ra cấp cho cảm biến và tính toán năng lượng tiết kiệm được qua chu kỳ làm việc (Duty Cycling).
+- 📖 **Doc 2.2:** Nguyên lý Ngắt An toàn Phóng (Chốt RBF, Công tắc Hành trình chân ray), Mạch Giám sát Sụt áp Brownout & Kỹ Thuật Power Gating Điều Khiển Dòng Vào Hạ Áp Cấp Nguồn Cảm Biến Qua GPIO 4 (Mức 1 ngắt dòng, Mức 0 cho phép dòng).
+- ❓ **Câu hỏi kiểm tra Doc 2.2:** Trắc nghiệm vai trò công tắc hành trình ray phóng, chốt RBF, mạch Reset Brownout BOD và kỹ thuật điều khiển dòng vào hạ áp qua GPIO 4 để cắt dòng tiêu thụ tĩnh của khối cảm biến.
+- 💻 **Thực hành Component Tiết Kiệm Điện:** `Lab2-02_Power_Saving` - Lập trình điều khiển dòng vào mạch hạ áp cấp nguồn cảm biến qua chân GPIO 4 (Mức 0: cấp nguồn cảm biến, Mức 1: ngắt nguồn) theo chu kỳ (Power Gating), tối ưu hóa năng lượng quỹ đạo.
+- ❓ **Câu hỏi kiểm tra Thực hành Tiết Kiệm Điện:** Trắc nghiệm phân tích khối code điều khiển GPIO 4, quy tắc logic Active-LOW (0 bật / 1 ngắt), khoảng thời gian chờ ổn định điện áp ngõ ra hạ áp (100ms) và hiệu quả giảm dòng rò.
 - 📝 **Tổng hợp Lab 2:** Nắm vững phương pháp quản lý, tối ưu hóa và bảo vệ nguồn điện cho vệ tinh.
 
 ---
