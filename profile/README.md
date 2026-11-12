@@ -128,26 +128,28 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
   - `Lab4-02a_IMU_I2C`: Đọc dữ liệu gia tốc và vận tốc góc thô 14 byte liên tiếp từ MPU6500.
   - `Lab4-02b_IMU_Library`: Cài đặt bộ lọc bù tính toán góc nghiêng vệ tinh (Roll, Pitch) mượt mà.
 
-### Component 3: Module Định Vị Toàn Cầu GNSS L76X
+### Component 3: Module Định Vị Toàn Cầu GNSS (GPS)
 - 🎥 **Video 4.4:** Tương tác và lấy dữ liệu tọa độ từ module định vị toàn cầu GNSS.
-- 📖 **Doc 4.3:** Nguyên lý Định vị Vệ tinh Đa Hệ thống (GPS & GLONASS), Cấu trúc Bản tin Chuẩn NMEA 0183 (`$GPRMC`, `$GPGGA`, Thuật toán Kiểm tra Checksum XOR) & Kỹ thuật Lập trình Bóc tách Tọa độ Địa lý Kinh/Vĩ độ qua UART.
-- 💻 **Thực hành Component GNSS L76X:** 
-  - `Lab4-03a_GPS_UART`: Đọc dữ liệu chuỗi NMEA ASCII thô từ module qua cổng UART.
-  - `Lab4-03b_GPS_Library`: Tự động trích xuất tọa độ kinh độ, vĩ độ, độ cao và số lượng vệ tinh bám khóa.
+- 📖 **Doc 4.3:** Nguyên lý Phần Cứng Module Định Vị GNSS L76X & Giao Tiếp UART Nhận Luồng Dữ Liệu NMEA Thô (Ăng-ten gốm, cơ chế Cold/Hot start, tốc độ baud 9600 bps trên UART2).
+- 💻 **Thực hành Nhóm 1 (Đọc giá trị thô NMEA):** 
+  - `Lab4-03a_GPS_Raw_UART`: Khởi tạo cổng UART kết nối module GNSS, đọc luồng byte thô và in trực tiếp các dòng câu tin NMEA thô (`$GPRMC`, `$GPGGA`) chưa qua xử lý lên màn hình Serial.
+- 📖 **Doc 4.4:** Phân Tích Chuyên Sâu Chuẩn Giao Thức NMEA 0183 & Kỹ Thuật Chuyển Đổi Dữ Liệu Thô Thành Các Trường Có Ý Nghĩa (Cấu trúc chi tiết từng trường của `$GPRMC`/`$GPGGA`, công thức đổi tọa độ Độ-Phút sang Độ Thập Phân Decimal Degrees, kiểm tra Checksum XOR, chỉ số phẩm chất HDOP và kiến trúc bộ giải mã Parser).
+- 💻 **Thực hành Nhóm 2 (Chuyển đổi NMEA thành các trường giá trị có ý nghĩa):** 
+  - `Lab4-03b_GPS_NMEA_Parser`: Sử dụng thư viện giải mã NMEA bóc tách luồng dữ liệu thô thành các biến số thực có ý nghĩa: Kinh độ, Vĩ độ, Cao độ (m), Vận tốc (km/h), Số lượng vệ tinh bám khóa, HDOP và Thời gian chuẩn quốc tế UTC.
 
 ### Component 4: Tải Trọng Camera Viễn Thám OV2640
-- 📖 **Doc 4.4:** Nguyên lý Cảm biến Ảnh Màu CMOS 2 Megapixel OV2640, Bộ Nén Phần Cứng JPEG & Kỹ thuật Lập trình Gửi Lệnh Cấu hình, Nhận Khối Byte Ảnh JPEG qua UART.
+- 📖 **Doc 4.5:** Nguyên lý Cảm biến Ảnh Màu CMOS 2 Megapixel OV2640, Bộ Nén Phần Cứng JPEG & Kỹ thuật Lập trình Gửi Lệnh Cấu hình, Nhận Khối Byte Ảnh JPEG qua UART.
 - 💻 **Thực hành Component Camera OV2640:** 
   - `Lab4-04a_Camera_UART`: Gửi tập lệnh cấu hình thanh ghi và bắt đầu phiên chụp ảnh từ Camera OV2640.
   - `Lab4-04b_Camera_Library`: Thu nhận khối byte ảnh JPEG nén phần cứng và hiển thị lên màn hình.
 
 ### Component 5: IC Chuyển Mạch Multiplexer 74HC4066
 - 🎥 **Video 4.5:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung cổng UART.
-- 📖 **Doc 4.5:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
+- 📖 **Doc 4.6:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
 - 💻 **Thực hành Component Multiplexer:** `Lab4-05_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
 
 ### Component 6: Tích Hợp Đa Cảm Biến Toàn Diện
-- 📖 **Doc 4.6:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
+- 📖 **Doc 4.7:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
 - 💻 **Thực hành Tích Hợp Đa Cảm Biến:** `Lab4-06_Read_All_Sensors` - Tổng hợp đọc tất cả cảm biến và tải trọng trên vệ tinh trong một chương trình hoàn chỉnh.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ sinh thái thu thập dữ liệu đa cảm biến và tải trọng quang học hoàn chỉnh.
 
