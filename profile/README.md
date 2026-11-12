@@ -70,7 +70,7 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 ---
 
 ## Lab 2: Phân hệ Năng lượng (EPS) & Quản lý Nguồn Quỹ đạo
-**🎯 Mục tiêu:** Nắm vững nguyên lý pin Li-Po, mạch sạc CC/CV TP4056, lập trình đọc điện áp và dung lượng pin với IC MAX17048 qua I2C, công tắc ngắt an toàn và lập trình chế độ ngủ sâu.
+**🎯 Mục tiêu:** Nắm vững nguyên lý pin Li-Po, mạch sạc CC/CV TP4056, lập trình đọc điện áp và dung lượng pin với IC MAX17048 qua I2C, công tắc ngắt an toàn và lập trình điều khiển dòng ra vào mạch hạ áp cấp nguồn cảm biến để tiết kiệm năng lượng.
 
 - 🎥 **Video 2.1:** Giới thiệu về Hệ thống Nguồn trên vệ tinh (Pin Li-Po, Mạch sạc CC/CV, IC Fuel Gauge).
 - 📖 **Doc 2.1:** Nguyên lý Pin Li-Po 3.7V, Thuật toán Sạc CC/CV của IC TP4056, Mạch Ổn áp Buck 3.3V / Boost 5.0V & Kỹ thuật Lập trình Đọc Thanh ghi `VCELL` (Điện áp) và `SOC` (Dung lượng %) của IC MAX17048 qua Bus I2C.
@@ -80,10 +80,10 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
   - `Lab2-01a_Battery_I2C`: Đọc trực tiếp thanh ghi điện áp và dung lượng pin MAX17048 qua thư viện `Wire.h`.
   - `Lab2-01b_Battery_Library`: Quản lý phân hệ nguồn EPS thông qua lớp thư viện PTITCube đóng gói cấp cao.
 - ❓ **Câu hỏi kiểm tra Thực hành Nguồn & MAX17048:** Trắc nghiệm phân tích code ghép 2 byte nhị phân thành số nguyên 16-bit, công thức nhân hệ số phân giải $78.125\mu\text{V}$, hàm đóng gói `myEPS.getVoltage()` và phương pháp phát hiện pin yếu.
-- 📖 **Doc 2.2:** Nguyên lý Ngắt An toàn Phóng (Chốt RBF, Công tắc Hành trình chân ray), Mạch Giám sát Sụt áp Brownout & Kỹ thuật Lập trình Chế độ Ngủ Sâu (Deep Sleep) Tiết kiệm Điện Năng với Bộ định thời RTC Timer.
-- ❓ **Câu hỏi kiểm tra Doc 2.2:** Trắc nghiệm vai trò công tắc hành trình ray phóng (Release Switch), cơ chế chốt RBF, mạch Reset sụt áp Brownout Detector (BOD) và kiến trúc miền nguồn RTC Controller khi CPU ngủ sâu.
-- 💻 **Thực hành Component Tiết Kiệm Điện:** `Lab2-02_Power_Saving` - Kích hoạt chế độ Deep Sleep với bộ định thời RTC, đo đạc dòng điện suy giảm và quan sát chu trình thức dậy an toàn.
-- ❓ **Câu hỏi kiểm tra Thực hành Tiết Kiệm Điện:** Trắc nghiệm phân tích khối code `esp_sleep_enable_timer_wakeup()`, hàm kích hoạt `esp_deep_sleep_start()`, trạng thái biến trong SRAM khi thức dậy và đo đạc mức sụt giảm dòng tiêu thụ.
+- 📖 **Doc 2.2:** Nguyên lý Ngắt An toàn Phóng (Chốt RBF, Công tắc Hành trình chân ray), Mạch Giám sát Sụt áp Brownout & Nguyên lý Điều Khiển Mạch Hạ Áp (Buck Converter) Cấp Nguồn Cảm Biến, Kỹ Thuật Power Gating Tối Ưu Hóa Năng Lượng Quỹ Đạo.
+- ❓ **Câu hỏi kiểm tra Doc 2.2:** Trắc nghiệm vai trò công tắc hành trình ray phóng, chốt RBF, mạch Reset Brownout BOD và kỹ thuật Power Gating khống chế dòng ra vào mạch hạ áp để cắt dòng tiêu thụ của khối cảm biến.
+- 💻 **Thực hành Component Tiết Kiệm Điện:** `Lab2-02_Power_Saving` - Lập trình điều khiển bật/tắt dòng ra vào mạch hạ áp (Buck Converter) cấp nguồn cho cụm cảm biến theo chu kỳ (Power Gating), tối ưu hóa dòng tiêu thụ trên quỹ đạo.
+- ❓ **Câu hỏi kiểm tra Thực hành Tiết Kiệm Điện:** Trắc nghiệm phân tích khối code điều khiển chân Enable mạch hạ áp, khoảng thời gian chờ ổn định điện áp đầu ra cấp cho cảm biến và tính toán năng lượng tiết kiệm được qua chu kỳ làm việc (Duty Cycling).
 - 📝 **Tổng hợp Lab 2:** Nắm vững phương pháp quản lý, tối ưu hóa và bảo vệ nguồn điện cho vệ tinh.
 
 ---
