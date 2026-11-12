@@ -95,15 +95,16 @@ Dưới đây là cấu trúc lộ trình học tập toàn diện dành cho h�
   - `Lab4-02a_IMU_I2C`: Đọc dữ liệu gia tốc và vận tốc góc thô 14 byte liên tiếp từ MPU6500.
   - `Lab4-02b_IMU_Library`: Cài đặt bộ lọc bù tính toán góc nghiêng vệ tinh (Roll, Pitch) mượt mà.
 - 🎥 **Video 4.4:** Tương tác và lấy dữ liệu tọa độ từ module định vị toàn cầu GNSS.
-- 📖 **Doc 4.3:** Module Định vị Toàn cầu GNSS L76X (Chuẩn NMEA 0183), Tải trọng Camera OV2640 Xung Nhịp Cao & Kỹ thuật Cách ly Nhiễu EMI bằng IC Chuyển mạch 74HC4066.
+- 📖 **Doc 4.3:** Module Định vị Toàn cầu GNSS L76X (Chuẩn NMEA 0183), Tải trọng Camera OV2640 & Kỹ thuật chuyển mạch Multiplexer 74HC4066 khi dùng chung cổng UART.
 - 💻 **Thực hành Định vị & Camera:** 
   - `Lab4-03a_GPS_UART`: Đọc dữ liệu chuỗi NMEA ASCII thô từ module qua cổng UART.
   - `Lab4-03b_GPS_Library`: Tự động trích xuất tọa độ kinh độ, vĩ độ, độ cao và số lượng vệ tinh bám khóa.
   - `Lab4-04a_Camera_UART`: Gửi tập lệnh cấu hình thanh ghi và bắt đầu phiên chụp ảnh từ Camera OV2640.
   - `Lab4-04b_Camera_Library`: Thu nhận khối byte ảnh JPEG nén phần cứng và hiển thị lên màn hình.
-  - `Lab4-05_Read_All_Sensors`: Tổng hợp đọc đồng thời tất cả các cảm biến trong một chu trình khép kín.
-- 🎥 **Video 4.5:** Giải quyết xung đột phần cứng và nhiễu sóng hài XCLK giữa Camera và GNSS.
-- 💻 **Thực hành Multiplexer:** `Lab4-06_Camera_Multiplexer` - Chuyển mạch luân phiên On-Demand giữa Camera và GNSS bằng IC 74HC4066, triệt tiêu nhiễu điện từ.
+- 🎥 **Video 4.5:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung cổng UART.
+- 💻 **Thực hành Tích hợp & Đa cảm biến:** 
+  - `Lab4-05_Camera_Multiplexer`: Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
+  - `Lab4-06_Read_All_Sensors`: Tổng hợp đọc tất cả cảm biến và tải trọng trên vệ tinh trong một chương trình hoàn chỉnh.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ sinh thái thu thập dữ liệu đa cảm biến và tải trọng quang học hoàn chỉnh.
 
 ---
@@ -134,9 +135,9 @@ Dưới đây là cấu trúc lộ trình học tập toàn diện dành cho h�
 - 📖 **Doc 6.1:** Vai Trò Khung Cơ Khí & Tác Động Đa Chiều Lên Các Phân Hệ Khác (Tấm tản nhiệt pin EPS, Lồng Faraday chắn bức xạ OBC, Mặt đất phẳng phản xạ 50 Ohm cho ăng-ten COM, Mặt phẳng tham chiếu cứng vững cho cảm biến).
 - 📖 **Doc 6.2:** Vật Liệu Hợp Kim Không Gian (Al 6061-T6, Al 7075-T6), Công nghệ Xử lý Bề mặt Chọn lọc (Anodize Type III chống hàn nguội vs Alodine Class 3 tiếp mass) & Tiêu chuẩn Thoát khí Chân không ASTM E595 (TML < 1%, CVCM < 0.1%).
 - 📖 **Doc 6.3:** Tiêu chuẩn Ngăn xếp Bo mạch PC/104, Bu lông Inox A2-70, Keo khóa ren Loctite 222, Bu lông Thông Hơi (Vented Screws) Chống Rò rỉ Ảo TVAC, Bảng Cân Đối Khối Lượng (Mass Budget) & Cân Bằng Trọng Tâm CoM trong Phạm vi $\pm 20\text{ mm}$.
-- 🎥 **Video 6.2:** Hướng dẫn quy trình lắp ráp khung cơ khí vệ tinh trong môi trường phòng sạch ISO Class 7/8.
-- 💻 **Thực hành Tự Kiểm tra Cơ khí:** Lập trình giải thuật C++ tính toán tọa độ trọng tâm CoM 3 chiều từ bảng khối lượng linh kiện và xác nhận dung sai phóng P-POD.
-- 📝 **Tổng hợp Lab 6:** Hoàn thiện bộ khung cơ khí vật lý vững chắc đạt đầy đủ tiêu chuẩn an toàn phóng không gian.
+- 🎥 **Video 6.2:** Hướng dẫn quy trình lắp khung vệ tinh của bộ kit.
+- 💻 **Thực hành:** Lắp ráp khung theo hướng dẫn và chụp hình ảnh cuối cùng làm kết quả.
+- 📝 **Tổng hợp Lab 6:** Hoàn thiện bộ khung vật lý cho vệ tinh của bộ kit.
 
 ---
 
