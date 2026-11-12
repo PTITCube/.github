@@ -131,10 +131,10 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 ### Component 3: Module Định Vị Toàn Cầu GNSS (GPS)
 - 🎥 **Video 4.4:** Tương tác và lấy dữ liệu tọa độ từ module định vị toàn cầu GNSS.
 - 📖 **Doc 4.3:** Nguyên lý Phần Cứng Module Định Vị GNSS L76X & Giao Tiếp UART Nhận Luồng Dữ Liệu NMEA Thô (Ăng-ten gốm, cơ chế Cold/Hot start, tốc độ baud 9600 bps trên UART2).
-- 💻 **Thực hành Nhóm 1 (Đọc giá trị thô NMEA):** 
+- 💻 **Thực hành Đọc giá trị thô NMEA:** 
   - `Lab4-03a_GPS_Raw_UART`: Khởi tạo cổng UART kết nối module GNSS, đọc luồng byte thô và in trực tiếp các dòng câu tin NMEA thô (`$GPRMC`, `$GPGGA`) chưa qua xử lý lên màn hình Serial.
 - 📖 **Doc 4.4:** Phân Tích Chuyên Sâu Chuẩn Giao Thức NMEA 0183 & Kỹ Thuật Chuyển Đổi Dữ Liệu Thô Thành Các Trường Có Ý Nghĩa (Cấu trúc chi tiết từng trường của `$GPRMC`/`$GPGGA`, công thức đổi tọa độ Độ-Phút sang Độ Thập Phân Decimal Degrees, kiểm tra Checksum XOR, chỉ số phẩm chất HDOP và kiến trúc bộ giải mã Parser).
-- 💻 **Thực hành Nhóm 2 (Chuyển đổi NMEA thành các trường giá trị có ý nghĩa):** 
+- 💻 **Thực hành Chuyển đổi NMEA thành các trường giá trị có ý nghĩa:** 
   - `Lab4-03b_GPS_NMEA_Parser`: Sử dụng thư viện giải mã NMEA bóc tách luồng dữ liệu thô thành các biến số thực có ý nghĩa: Kinh độ, Vĩ độ, Cao độ (m), Vận tốc (km/h), Số lượng vệ tinh bám khóa, HDOP và Thời gian chuẩn quốc tế UTC.
 
 ### Component 4: Tải Trọng Camera Viễn Thám OV2640
