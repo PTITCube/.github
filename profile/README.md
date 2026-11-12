@@ -155,15 +155,15 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
   - `Lab4-04a_Camera_UART`: Gửi tập lệnh cấu hình thanh ghi và bắt đầu phiên chụp ảnh từ Camera OV2640.
   - `Lab4-04b_Camera_Library`: Thu nhận khối byte ảnh JPEG nén phần cứng và hiển thị lên màn hình.
 - ❓ **Câu hỏi kiểm tra Thực hành Camera OV2640:** Trắc nghiệm phân tích gói lệnh cấu hình chụp ảnh, cơ chế đệm nhận luồng byte ảnh nhị phân qua UART và lưu trữ dữ liệu ảnh vào bộ nhớ.
-- 🎥 **Video 4.5:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung cổng UART.
-- 📖 **Doc 4.6:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
-- ❓ **Câu hỏi kiểm tra Doc 4.6:** Trắc nghiệm nguyên nhân xung đột UART phần cứng, cấu tạo công tắc 2 chiều bên trong 74HC4066, điện trở tiếp xúc $R_{ON}$ và giải pháp dồn kênh thời gian (TDM).
-- 💻 **Thực hành Component Multiplexer:** `Lab4-05_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
-- ❓ **Câu hỏi kiểm tra Thực hành Multiplexer:** Trắc nghiệm phân tích mã điều khiển chân chọn kênh GPIO `HIGH`/`LOW`, quy trình flush bộ đệm trước khi đổi kênh và phối hợp luân phiên giữa lấy tọa độ và chụp ảnh.
-- 📖 **Doc 4.7:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
-- ❓ **Câu hỏi kiểm tra Doc 4.7:** Trắc nghiệm kiến trúc chu trình vòng lặp cảm biến tập trung, chiến lược đồng bộ dấu thời gian (Timestamping) và phân bổ chu kỳ lấy mẫu cho từng loại cảm biến.
-- 💻 **Thực hành Tích Hợp Đa Cảm Biến:** `Lab4-06_Read_All_Sensors` - Tổng hợp đọc tất cả cảm biến và tải trọng trên vệ tinh trong một chương trình hoàn chỉnh.
+- 📖 **Doc 4.6:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
+- ❓ **Câu hỏi kiểm tra Doc 4.6:** Trắc nghiệm kiến trúc chu trình vòng lặp cảm biến tập trung, chiến lược đồng bộ dấu thời gian (Timestamping) và phân bổ chu kỳ lấy mẫu cho từng loại cảm biến.
+- 💻 **Thực hành Tích Hợp Đa Cảm Biến:** `Lab4-05_Read_All_Sensors` - Tổng hợp đọc tất cả cảm biến môi trường (BMP280), quán tính (MPU6500, QMC5883) và định vị (GPS L76X) trên vệ tinh trong một chương trình hoàn chỉnh.
 - ❓ **Câu hỏi kiểm tra Thực hành Đa Cảm Biến:** Trắc nghiệm phân tích khối code cấu trúc dữ liệu viễn trắc tổng hợp `struct TelemetryPacket`, gom dữ liệu khí áp, quán tính, tọa độ và quản lý tài nguyên vi điều khiển.
+- 🎥 **Video 4.5:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung cổng UART.
+- 📖 **Doc 4.7:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
+- ❓ **Câu hỏi kiểm tra Doc 4.7:** Trắc nghiệm nguyên nhân xung đột UART phần cứng, cấu tạo công tắc 2 chiều bên trong 74HC4066, điện trở tiếp xúc $R_{ON}$ và giải pháp dồn kênh thời gian (TDM).
+- 💻 **Thực hành Component Multiplexer:** `Lab4-06_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
+- ❓ **Câu hỏi kiểm tra Thực hành Multiplexer:** Trắc nghiệm phân tích mã điều khiển chân chọn kênh GPIO `HIGH`/`LOW`, quy trình flush bộ đệm trước khi đổi kênh và phối hợp luân phiên giữa lấy tọa độ và chụp ảnh.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ sinh thái thu thập dữ liệu đa cảm biến và tải trọng quang học hoàn chỉnh.
 
 ---
