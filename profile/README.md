@@ -37,23 +37,24 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 💻 **Thực hành Component LED:**
   - `Lab1-01_Blink_LED`: Nhấp nháy đèn LED nhịp tim (Heartbeat) kiểm tra chu trình sống bo mạch.
   - `Lab1-02_Control_Multiple_LEDs`: Điều khiển chuỗi LED tuần tự bằng mảng và vòng lặp.
-- ❓ **Câu hỏi kiểm tra Thực hành LED:** Trắc nghiệm phân tích khối chức năng mã nguồn: hàm `pinMode()`, `digitalWrite()`, mảng chân GPIO và giải thuật vòng lặp tuần tự.
+  - `Lab1-03_PWM_LED`: Điều chế độ rộng xung LEDC PWM tạo hiệu ứng đèn thở (Breathing LED) điều khiển độ sáng mượt mà.
+- ❓ **Câu hỏi kiểm tra Thực hành LED:** Trắc nghiệm phân tích khối chức năng mã nguồn: hàm `pinMode()`, `digitalWrite()`, mảng chân GPIO, các hàm cấu hình PWM (`ledcSetup()`, `ledcAttachPin()`, `ledcWrite()`) và giải thuật điều chế Duty Cycle.
 - 📖 **Doc 1.4:** Nguyên lý Hoạt động & Kỹ thuật Lập trình Nút Nhấn Cơ học (Điện trở kéo lên nội `INPUT_PULLUP` và giải thuật chống rung tiếp điểm Debounce bằng phần mềm).
 - ❓ **Câu hỏi kiểm tra Doc 1.4:** Trắc nghiệm nguyên lý mức logic hở mạch (Floating), mạch điện trở kéo lên nội tâm và hiện tượng nảy tiếp điểm cơ khí (Contact Bounce).
 - 💻 **Thực hành Component Nút Nhấn:**
-  - `Lab1-03_Button`: Đọc trạng thái mức logic của nút nhấn cơ bản.
-  - `Lab1-04_LED_Button`: Đảo trạng thái đèn LED theo sự kiện nhấn nút kết hợp thuật toán chống rung.
+  - `Lab1-04_Button`: Đọc trạng thái mức logic của nút nhấn cơ bản.
+  - `Lab1-05_LED_Button`: Đảo trạng thái đèn LED theo sự kiện nhấn nút kết hợp thuật toán chống rung.
 - ❓ **Câu hỏi kiểm tra Thực hành Nút Nhấn:** Trắc nghiệm phân tích khối code đọc `digitalRead()`, biến trạng thái chốt (Toggle) và giải thuật lọc chống rung phần mềm với thời gian trễ kiểm tra.
 - 📖 **Doc 1.5:** Nguyên lý Vi mạch Dịch Bit Chốt Dữ liệu 74HC595 & Kỹ thuật Lập trình Điều khiển Màn hình LED 7 Đoạn (3 đường tín hiệu DS, SH_CP, ST_CP và hàm dịch bit `shiftOut`).
 - ❓ **Câu hỏi kiểm tra Doc 1.5:** Trắc nghiệm cấu tạo thanh ghi dịch 8-bit và thanh ghi chốt lưu trữ (Storage Register), giản đồ xung nhịp của chân DS, SH_CP, ST_CP và bảng mã giải mã Anode/Cathode chung.
 - 💻 **Thực hành Component 74HC595 & LED 7 Đoạn:**
-  - `Lab1-05_7_Segment_LED`: Lập trình dịch 8 bit qua IC 74HC595 hiển thị số đếm từ 0 đến 9 trên LED 7 đoạn.
+  - `Lab1-06_7_Segment_LED`: Lập trình dịch 8 bit qua IC 74HC595 hiển thị số đếm từ 0 đến 9 trên LED 7 đoạn.
 - ❓ **Câu hỏi kiểm tra Thực hành 74HC595:** Trắc nghiệm cấu trúc code hàm `shiftOut()`, thứ tự truyền bit MSBFIRST/LSBFIRST, thao tác chốt chân `latchPin` bằng cặp lệnh `LOW`/`HIGH` và mảng mẫu byte hiển thị.
 - 📖 **Doc 1.6:** Nguyên lý Giao tiếp Nối tiếp Bất đồng bộ UART & Kỹ thuật Lập trình Truyền Nhận Ký tự Hai chiều với Máy tính qua Cổng Serial ở tốc độ 115200 bps.
 - ❓ **Câu hỏi kiểm tra Doc 1.6:** Trắc nghiệm cấu trúc khung truyền bất đồng bộ UART (Start bit, Data bits, Parity bit, Stop bit), tốc độ baud và cơ chế đệm phần cứng (FIFO buffer).
 - 💻 **Thực hành Component UART:**
-  - `Lab1-06_Serial_Communication`: Giao tiếp cổng nối tiếp UART định dạng chuẩn.
-  - `Lab1-07_Serial_Control_LED`: Xây dựng bộ phân tích cú pháp ký tự UART điều khiển bật/tắt thiết bị từ máy tính.
+  - `Lab1-07_Serial_Communication`: Giao tiếp cổng nối tiếp UART định dạng chuẩn.
+  - `Lab1-08_Serial_Control_LED`: Xây dựng bộ phân tích cú pháp ký tự UART điều khiển bật/tắt thiết bị từ máy tính.
 - ❓ **Câu hỏi kiểm tra Thực hành UART:** Trắc nghiệm phân tích khối code `Serial.available()`, `Serial.read()`, cấu trúc rẽ nhánh `switch-case` giải mã ký tự điều khiển và kỹ thuật định dạng in ấn.
 - 📖 **Doc 1.7:** Nguyên lý Mạng Không dây 802.11 (Chế độ Trạm STA vs Điểm truy cập SoftAP) & Kỹ thuật Lập trình Máy chủ Web HTTP Nhúng Xử lý Yêu cầu GET/POST.
 - ❓ **Câu hỏi kiểm tra Doc 1.7:** Trắc nghiệm cơ chế phát sóng WiFi 2.4GHz, địa chỉ IP động DHCP vs IP tĩnh, giao thức HTTP cổng 80 và các phương thức yêu cầu GET/POST.
@@ -61,9 +62,9 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - ❓ **Câu hỏi kiểm tra Doc 1.8:** Trắc nghiệm tác hại chí mạng của hàm chặn `delay()` trong phần mềm bay, kiểu dữ liệu `unsigned long` của `millis()` và chứng minh toán học phép trừ chống lỗi tràn số.
 - 🎥 **Video 1.3:** Giới thiệu về kết nối WiFi và Máy chủ Web nhúng.
 - 💻 **Thực hành Component WiFi & Web Server:**
-  - `Lab1-08_WiFi_Connection`: Kết nối ESP32 vào mạng WiFi cục bộ và in địa chỉ IP.
-  - `Lab1-09_WiFi_AP_Mode`: Cấu hình vệ tinh tự phát mạng WiFi SoftAP bảo mật WPA2.
-  - `Lab1-10_Web_Server_LED`: Dựng máy chủ HTTP nhúng điều khiển thiết bị qua giao diện trình duyệt web.
+  - `Lab1-09_WiFi_Connection`: Kết nối ESP32 vào mạng WiFi cục bộ và in địa chỉ IP.
+  - `Lab1-10_WiFi_AP_Mode`: Cấu hình vệ tinh tự phát mạng WiFi SoftAP bảo mật WPA2.
+  - `Lab1-11_Web_Server_LED`: Dựng máy chủ HTTP nhúng điều khiển thiết bị qua giao diện trình duyệt web.
 - ❓ **Câu hỏi kiểm tra Thực hành WiFi & Web Server:** Trắc nghiệm phân tích khối code `WiFi.begin()`, `WiFi.softAP()`, đăng ký hàm định tuyến `server.on()`, xử lý chuỗi phản hồi HTML và cấu trúc vòng lặp Non-blocking `server.handleClient()`.
 - 📝 **Tổng hợp Lab 1:** Hoàn thiện kỹ năng lập trình nhúng C++ cơ bản và điều khiển toàn diện các linh kiện ngoại vi của bo mạch OBC.
 
