@@ -141,12 +141,13 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 📖 **Doc 4.3:** Nguyên lý Phần Cứng Module Định Vị GNSS L76X & Giao Tiếp UART Nhận Luồng Dữ Liệu NMEA Thô (Ăng-ten gốm, cơ chế Cold/Hot start, tốc độ baud 9600 bps trên UART2).
 - ❓ **Câu hỏi kiểm tra Doc 4.3:** Trắc nghiệm cấu tạo ăng-ten gốm Patch Antenna, bộ khuếch đại tạp âm thấp LNA, thời gian chốt vệ tinh TTFF (Cold vs Hot start) và cấu hình chân UART2 GPIO 16/17.
 - 💻 **Thực hành Đọc giá trị thô NMEA:** 
-  - `Lab4-03a_GPS_Raw_UART`: Khởi tạo cổng UART kết nối module GNSS, đọc luồng byte thô và in trực tiếp các dòng câu tin NMEA thô (`$GPRMC`, `$GPGGA`) chưa qua xử lý lên màn hình Serial.
+  - `Lab4-03a_GPS_UART`: Khởi tạo cổng UART kết nối module GNSS, đọc luồng byte thô và in trực tiếp các dòng câu tin NMEA thô (`$GPRMC`, `$GPGGA`) chưa qua xử lý lên màn hình Serial.
+  - `Lab4-03b_GPS_Library`: Sử dụng bộ đệm dòng thu nhận, phân loại câu tin NMEA thô và kiểm tra tính toàn vẹn Checksum XOR (*hh).
 - ❓ **Câu hỏi kiểm tra Thực hành Đọc NMEA thô:** Trắc nghiệm phân tích code `Serial2.begin(9600)`, luồng đọc ký tự vòng lặp `while(Serial2.available())` và nhận dạng các dòng bản tin `$GPRMC` bắt đầu bằng ký tự `$`.
 - 📖 **Doc 4.4:** Phân Tích Chuyên Sâu Chuẩn Giao Thức NMEA 0183 & Kỹ Thuật Chuyển Đổi Dữ Liệu Thô Thành Các Trường Có Ý Nghĩa (Cấu trúc chi tiết từng trường của `$GPRMC`/`$GPGGA`, công thức đổi tọa độ Độ-Phút sang Độ Thập Phân Decimal Degrees, kiểm tra Checksum XOR, chỉ số phẩm chất HDOP và kiến trúc bộ giải mã Parser).
 - ❓ **Câu hỏi kiểm tra Doc 4.4:** Trắc nghiệm ý nghĩa từng trường dữ liệu bản tin `$GPRMC`/`$GPGGA`, công thức toán học đổi tọa độ $\text{Degrees} + \text{Minutes}/60.0$, thuật toán tính Checksum XOR và ngưỡng đánh giá độ chính xác HDOP.
 - 💻 **Thực hành Chuyển đổi NMEA thành các trường giá trị có ý nghĩa:** 
-  - `Lab4-03b_GPS_NMEA_Parser`: Sử dụng thư viện giải mã NMEA bóc tách luồng dữ liệu thô thành các biến số thực có ý nghĩa: Kinh độ, Vĩ độ, Cao độ (m), Vận tốc (km/h), Số lượng vệ tinh bám khóa, HDOP và Thời gian chuẩn quốc tế UTC.
+  - `Lab4-03c_GPS_PTITCube`: Sử dụng thư viện PTITCube bóc tách luồng dữ liệu NMEA thô thành các biến số thực có ý nghĩa mà người dùng hiểu được: Kinh độ, Vĩ độ, Cao độ (m), Vận tốc (km/h), Hướng đi (°), Số lượng vệ tinh bám khóa, HDOP và Thời gian chuẩn quốc tế UTC.
 - ❓ **Câu hỏi kiểm tra Thực hành Giải mã NMEA:** Trắc nghiệm phân tích code máy trạng thái `myGPS.update()`, kiểm tra điều kiện bám khóa vệ tinh `myGPS.getSatellites() > 0` và trích xuất dữ liệu tọa độ số thực.
 - 📖 **Doc 4.5:** Nguyên lý Cảm biến Ảnh Màu CMOS 2 Megapixel OV2640, Bộ Nén Phần Cứng JPEG & Kỹ thuật Lập trình Gửi Lệnh Cấu hình, Nhận Khối Byte Ảnh JPEG qua UART.
 - ❓ **Câu hỏi kiểm tra Doc 4.5:** Trắc nghiệm cấu tạo ma trận điểm ảnh CMOS, vai trò đường xung nhịp ngoài XCLK (10-20MHz), cơ chế nén JPEG phần cứng và cặp byte đánh dấu bắt đầu/kết thúc ảnh (`0xFFD8` / `0xFFD9`).
