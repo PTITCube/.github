@@ -107,13 +107,14 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 🎥 **Video 3.3:** Tại sao phần mềm vệ tinh hiện đại bắt buộc phải dùng Hệ điều hành Thời gian thực (RTOS)?
 - 📖 **Doc 3.3:** Nguyên lý Đa nhiệm FreeRTOS (Tác vụ Task, Mức ưu tiên Priority, Ngăn xếp Stack, Bộ điều phối Preemptive Scheduler), Hiện tượng Tranh chấp Tài nguyên Dùng chung, Sự cố Nghịch đảo Ưu tiên (Priority Inversion - Mars Pathfinder) & Kỹ thuật Lập trình Đồng bộ hóa bằng Khóa Mutex.
 - ❓ **Câu hỏi kiểm tra Doc 3.3:** Trắc nghiệm cơ chế định thời chiếm quyền (Preemption), cấu trúc TCB, rủi ro tương tranh tài nguyên dùng chung, bài học lịch sử tàu Mars Pathfinder và cơ chế kế thừa ưu tiên (Priority Inheritance) của Mutex.
-- 💻 **Thực hành Component FreeRTOS Multitasking:** `Lab3-03_Multitasking_Scheduler` - Chạy đồng thời 3 tác vụ độc lập được đồng bộ hóa an toàn bằng khóa Mutex.
+- 💻 **Thực hành Component FreeRTOS Multitasking:** `Lab3-03_Multitasking_Scheduler` - Chạy đồng thời 3 tác vụ độc lập (Nháy LED nhịp tim GPIO 2, Sinh dữ liệu viễn trắc giả lập, Tự chẩn đoán hệ thống trên Core 0) được đồng bộ hóa an toàn bằng khóa Mutex.
 - ❓ **Câu hỏi kiểm tra Thực hành FreeRTOS:** Trắc nghiệm phân tích code hàm khởi tạo `xTaskCreatePinnedToCore()`, vòng lặp tác vụ vô tận `for(;;)`, hàm nhả quyền CPU `vTaskDelay()` và cặp hàm bảo vệ tài nguyên `xSemaphoreTake()` / `xSemaphoreGive()`.
 - 🎥 **Video 3.4:** Gỡ lỗi treo hệ thống do bức xạ không gian bằng Bộ định thời Chó canh.
 - 📖 **Doc 3.4:** Nguyên lý Mạch Đếm Giám sát Phần cứng WDT, Phân cấp Chó canh (IWDT, TWDT) & Kỹ thuật Lập trình Task Watchdog Timer (TWDT) Tự động Phục hồi Lỗi Treo Vi điều khiển.
 - ❓ **Câu hỏi kiểm tra Doc 3.4:** Trắc nghiệm cơ chế đếm ngược thời gian của WDT, phân biệt bộ đếm ngắt quãng độc lập (IWDT) và bộ giám sát tác vụ (TWDT), quy trình "cho chó ăn" (Feed/Reset WDT).
-- 💻 **Thực hành Component Watchdog:** `Lab3-04_Watchdog_And_Event` - Kích hoạt Task Watchdog Timer, mô phỏng tình huống tác vụ bị treo và quan sát quá trình tự động reset phục hồi.
-- ❓ **Câu hỏi kiểm tra Thực hành Watchdog:** Trắc nghiệm phân tích code cấu hình `esp_task_wdt_init()`, đăng ký tác vụ `esp_task_wdt_add()`, gọi định kỳ `esp_task_wdt_reset()` và giải thích hiện tượng CPU tự động khởi động lại khi tác vụ rơi vào vòng lặp vô tận.
+- 💻 **Thực hành Component Watchdog:** `Lab3-04_Watchdog_Timer` (hoặc `Lab3-04_Watchdog_And_Event`) - Kích hoạt Task Watchdog Timer, nạp lại định kỳ trong tác vụ nhịp tim, mô phỏng lỗi treo vi xử lý qua Nút nhấn GPIO 4 / Serial và quan sát quá trình vi điều khiển tự động reset phục hồi (FDIR).
+- 💻 **Thực hành Component Hướng sự kiện (Event-Driven):** `Lab3-05_Event_Driven_Queue` - Xây dựng kiến trúc hướng sự kiện với hàng đợi FreeRTOS Queue, tiếp nhận sự kiện ngắt nút nhấn, cảnh báo viễn trắc vượt ngưỡng và lệnh điều khiển Serial mà không cần vòng lặp thăm dò.
+- ❓ **Câu hỏi kiểm tra Thực hành Watchdog & Event:** Trắc nghiệm phân tích code cấu hình `esp_task_wdt_init()`, đăng ký tác vụ `esp_task_wdt_add()`, gọi định kỳ `esp_task_wdt_reset()` và cơ chế truyền nhận dữ liệu qua hàng đợi `xQueueSend()` / `xQueueReceive()`.
 - 📝 **Tổng hợp Lab 3:** Thiết lập thành công hộp đen lưu trữ dữ liệu quỹ đạo và xây dựng nền tảng phần mềm đa nhiệm tin cậy cao.
 
 ---
