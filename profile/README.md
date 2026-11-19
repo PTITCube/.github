@@ -112,7 +112,7 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 🎥 **Video 3.4:** Gỡ lỗi treo hệ thống do bức xạ không gian bằng Bộ định thời Chó canh.
 - 📖 **Doc 3.4:** Nguyên lý Mạch Đếm Giám sát Phần cứng WDT, Phân cấp Chó canh (IWDT, TWDT) & Kỹ thuật Lập trình Task Watchdog Timer (TWDT) Tự động Phục hồi Lỗi Treo Vi điều khiển.
 - ❓ **Câu hỏi kiểm tra Doc 3.4:** Trắc nghiệm cơ chế đếm ngược thời gian của WDT, phân biệt bộ đếm ngắt quãng độc lập (IWDT) và bộ giám sát tác vụ (TWDT), quy trình "cho chó ăn" (Feed/Reset WDT).
-- 💻 **Thực hành Component Watchdog:** `Lab3-04_Watchdog_Timer` (hoặc `Lab3-04_Watchdog_And_Event`) - Kích hoạt Task Watchdog Timer, nạp lại định kỳ trong tác vụ nhịp tim, mô phỏng lỗi treo vi xử lý qua Nút nhấn GPIO 4 / Serial và quan sát quá trình vi điều khiển tự động reset phục hồi (FDIR).
+- 💻 **Thực hành Component Watchdog:** `Lab3-04_Watchdog_Timer` - Kích hoạt Task Watchdog Timer, nạp lại định kỳ trong tác vụ nhịp tim, mô phỏng lỗi treo vi xử lý qua Nút nhấn GPIO 4 / Serial và quan sát quá trình vi điều khiển tự động reset phục hồi (FDIR).
 - 💻 **Thực hành Component Hướng sự kiện (Event-Driven):** `Lab3-05_Event_Driven_Queue` - Xây dựng kiến trúc hướng sự kiện với hàng đợi FreeRTOS Queue, tiếp nhận sự kiện ngắt nút nhấn, cảnh báo viễn trắc vượt ngưỡng và lệnh điều khiển Serial mà không cần vòng lặp thăm dò.
 - ❓ **Câu hỏi kiểm tra Thực hành Watchdog & Event:** Trắc nghiệm phân tích code cấu hình `esp_task_wdt_init()`, đăng ký tác vụ `esp_task_wdt_add()`, gọi định kỳ `esp_task_wdt_reset()` và cơ chế truyền nhận dữ liệu qua hàng đợi `xQueueSend()` / `xQueueReceive()`.
 - 📝 **Tổng hợp Lab 3:** Thiết lập thành công hộp đen lưu trữ dữ liệu quỹ đạo và xây dựng nền tảng phần mềm đa nhiệm tin cậy cao.
@@ -186,7 +186,7 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - 📖 **Doc 5.3:** Nguyên lý Đóng gói Khung Bản tin Telemetry, Thuật toán Kiểm tra Lỗi Chu kỳ CRC-16-CCITT, Cơ chế Stop-and-Wait ARQ & Kiến trúc Trạm Mặt Đất (SDR, Biểu đồ Thác nước Waterfall, Cơ cấu Xoay Rotator Bám đuổi Quỹ đạo TLE).
 - ❓ **Câu hỏi kiểm tra Doc 5.3:** Trắc nghiệm đa thức sinh mã kiểm tra lỗi CRC-16-CCITT (`0x1021`), cơ chế tự động yêu cầu truyền lại (ARQ), cấu hình máy thu vô tuyến định nghĩa bằng phần mềm (SDR) và định dạng phần tử quỹ đạo TLE (Two-Line Element).
 - 🎥 **Video 5.3:** Xây dựng và vận hành Trạm mặt đất thu phát tín hiệu thực tế.
-- 💻 **Thực hành Trạm Mặt Đất:** `Lab5-03_Satellite_Comm_System` - Thiết lập luồng giao tiếp vô tuyến hai chiều hoàn chỉnh giữa vệ tinh và trạm mặt đất.
+- 💻 **Thực hành Trạm Mặt Đất:** `Lab5-03_Ground_Station_Demo` - Thiết lập luồng giao tiếp vô tuyến hai chiều hoàn chỉnh giữa vệ tinh và trạm mặt đất.
 - ❓ **Câu hỏi kiểm tra Thực hành Trạm Mặt Đất:** Trắc nghiệm phân tích code xác thực mã CRC-16 khi nhận bản tin Downlink, đóng gói bản tin Telecommand từ mặt đất và giải mã phản hồi ACK từ vệ tinh.
 - 📝 **Tổng hợp Lab 5:** Hoàn thành liên kết truyền thông viễn trắc và viễn lệnh không gian hai chiều tin cậy cao.
 
