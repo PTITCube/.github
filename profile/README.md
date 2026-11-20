@@ -109,9 +109,9 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
 - ❓ **Câu hỏi kiểm tra Doc 3.3:** Trắc nghiệm cơ chế định thời chiếm quyền (Preemption), cấu trúc TCB, rủi ro tương tranh tài nguyên dùng chung, bài học lịch sử tàu Mars Pathfinder và cơ chế kế thừa ưu tiên (Priority Inheritance) của Mutex.
 - 💻 **Thực hành Component FreeRTOS Multitasking:** `Lab3-03_Multitasking_Scheduler` - Chạy đồng thời 3 tác vụ độc lập (Nháy LED nhịp tim GPIO 2, Sinh dữ liệu viễn trắc giả lập, Tự chẩn đoán hệ thống trên Core 0) được đồng bộ hóa an toàn bằng khóa Mutex.
 - ❓ **Câu hỏi kiểm tra Thực hành FreeRTOS:** Trắc nghiệm phân tích code hàm khởi tạo `xTaskCreatePinnedToCore()`, vòng lặp tác vụ vô tận `for(;;)`, hàm nhả quyền CPU `vTaskDelay()` và cặp hàm bảo vệ tài nguyên `xSemaphoreTake()` / `xSemaphoreGive()`.
-- 🎥 **Video 3.4:** Gỡ lỗi treo hệ thống do bức xạ không gian bằng Bộ định thời Chó canh.
-- 📖 **Doc 3.4:** Nguyên lý Mạch Đếm Giám sát Phần cứng WDT, Phân cấp Chó canh (IWDT, TWDT) & Kỹ thuật Lập trình Task Watchdog Timer (TWDT) Tự động Phục hồi Lỗi Treo Vi điều khiển.
-- ❓ **Câu hỏi kiểm tra Doc 3.4:** Trắc nghiệm cơ chế đếm ngược thời gian của WDT, phân biệt bộ đếm ngắt quãng độc lập (IWDT) và bộ giám sát tác vụ (TWDT), quy trình "cho chó ăn" (Feed/Reset WDT).
+- 🎥 **Video 3.4:** Gỡ lỗi treo hệ thống do bức xạ không gian bằng Bộ định thời Watchdog Timer.
+- 📖 **Doc 3.4:** Nguyên lý Mạch Đếm Giám sát Phần cứng WDT, Phân cấp Watchdog Timer (IWDT, TWDT) & Kỹ thuật Lập trình Task Watchdog Timer (TWDT) Tự động Phục hồi Lỗi Treo Vi điều khiển.
+- ❓ **Câu hỏi kiểm tra Doc 3.4:** Trắc nghiệm cơ chế đếm ngược thời gian của WDT, phân biệt bộ đếm ngắt quãng độc lập (IWDT) và bộ giám sát tác vụ (TWDT), quy trình làm tươi Watchdog Timer (Feed/Reset WDT).
 - 💻 **Thực hành Component Watchdog:** `Lab3-04_Watchdog_Timer` - Kích hoạt Task Watchdog Timer, nạp lại định kỳ trong tác vụ nhịp tim, mô phỏng lỗi treo vi xử lý qua Nút nhấn GPIO 4 / Serial và quan sát quá trình vi điều khiển tự động reset phục hồi (FDIR).
 - 💻 **Thực hành Component Hướng sự kiện (Event-Driven):** `Lab3-05_Event_Driven_Queue` - Xây dựng kiến trúc hướng sự kiện với hàng đợi FreeRTOS Queue, tiếp nhận sự kiện ngắt nút nhấn, cảnh báo viễn trắc vượt ngưỡng và lệnh điều khiển Serial mà không cần vòng lặp thăm dò.
 - ❓ **Câu hỏi kiểm tra Thực hành Watchdog & Event:** Trắc nghiệm phân tích code cấu hình `esp_task_wdt_init()`, đăng ký tác vụ `esp_task_wdt_add()`, gọi định kỳ `esp_task_wdt_reset()` và cơ chế truyền nhận dữ liệu qua hàng đợi `xQueueSend()` / `xQueueReceive()`.
@@ -155,15 +155,15 @@ Chào mừng bạn đến với khóa học lập trình và vận hành Vệ ti
   - `Lab4-04a_Camera_UART`: Giao tiếp bắt tay UART thuần (`p` -> `SIZE` -> `OK` -> stream -> `DONE`) với module ESP32-CAM và ghi trực tiếp luồng byte ảnh JPEG vào thẻ nhớ MicroSD qua bus SPI.
   - `Lab4-04b_Camera_Library`: Sử dụng thư viện PTITCube (`PTIT_Camera`) chụp ảnh và tự động quản lý lưu trữ vào thẻ nhớ MicroSD qua hàm tiện ích cấp cao.
 - ❓ **Câu hỏi kiểm tra Thực hành Camera OV2640:** Trắc nghiệm phân tích gói lệnh cấu hình chụp ảnh, cơ chế đệm nhận luồng byte ảnh nhị phân qua UART và lưu trữ dữ liệu ảnh vào bộ nhớ.
-- 📖 **Doc 4.6:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
-- ❓ **Câu hỏi kiểm tra Doc 4.6:** Trắc nghiệm kiến trúc chu trình vòng lặp cảm biến tập trung, chiến lược đồng bộ dấu thời gian (Timestamping) và phân bổ chu kỳ lấy mẫu cho từng loại cảm biến.
-- 💻 **Thực hành Tích Hợp Đa Cảm Biến:** `Lab4-05_Read_All_Sensors` - Tổng hợp đọc tất cả cảm biến môi trường (BMP280), quán tính (MPU6500, QMC5883) và định vị (GPS L76X) trên vệ tinh trong một chương trình hoàn chỉnh.
-- ❓ **Câu hỏi kiểm tra Thực hành Đa Cảm Biến:** Trắc nghiệm phân tích khối code cấu trúc dữ liệu viễn trắc tổng hợp `struct TelemetryPacket`, gom dữ liệu khí áp, quán tính, tọa độ và quản lý tài nguyên vi điều khiển.
 - 🎥 **Video 4.5:** Giải quyết xung đột phần cứng khi Camera và GPS dùng chung cổng UART.
-- 📖 **Doc 4.7:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
-- ❓ **Câu hỏi kiểm tra Doc 4.7:** Trắc nghiệm nguyên nhân xung đột UART phần cứng, cấu tạo công tắc 2 chiều bên trong 74HC4066, điện trở tiếp xúc $R_{ON}$ và giải pháp dồn kênh thời gian (TDM).
-- 💻 **Thực hành Component Multiplexer:** `Lab4-06_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
+- 📖 **Doc 4.6:** Nguyên lý Vi mạch Khóa Chuyển Mạch Tương tự 4 Kênh 74HC4066 (Quad Bilateral Switch) & Kỹ thuật Lập trình Điều khiển Chuyển Mạch Luân phiên On-Demand giữa Camera và GNSS trên Cùng Cổng UART.
+- ❓ **Câu hỏi kiểm tra Doc 4.6:** Trắc nghiệm nguyên nhân xung đột UART phần cứng, cấu tạo công tắc 2 chiều bên trong 74HC4066, điện trở tiếp xúc $R_{ON}$ và giải pháp dồn kênh thời gian (TDM).
+- 💻 **Thực hành Component Multiplexer:** `Lab4-05_Camera_Multiplexer` - Chuyển mạch luân phiên Camera & GPS bằng IC Multiplexer 74HC4066 giải quyết xung đột cổng UART.
 - ❓ **Câu hỏi kiểm tra Thực hành Multiplexer:** Trắc nghiệm phân tích mã điều khiển chân chọn kênh GPIO `HIGH`/`LOW`, quy trình flush bộ đệm trước khi đổi kênh và phối hợp luân phiên giữa lấy tọa độ và chụp ảnh.
+- 📖 **Doc 4.7:** Nguyên lý Phối Hợp Mạng Đa Cảm Biến Trên Vệ Tinh & Kỹ thuật Lập trình Thu thập Dữ liệu Đồng bộ Trong Một Chu Trình Khép Kín.
+- ❓ **Câu hỏi kiểm tra Doc 4.7:** Trắc nghiệm kiến trúc chu trình vòng lặp cảm biến tập trung, chiến lược đồng bộ dấu thời gian (Timestamping) và phân bổ chu kỳ lấy mẫu cho từng loại cảm biến.
+- 💻 **Thực hành Tích Hợp Đa Cảm Biến:** `Lab4-06_Read_All_Sensors` - Tổng hợp đọc tất cả cảm biến môi trường (BMP280), quán tính (MPU6500, QMC5883) và định vị (GPS L76X) trên vệ tinh trong một chương trình hoàn chỉnh.
+- ❓ **Câu hỏi kiểm tra Thực hành Đa Cảm Biến:** Trắc nghiệm phân tích khối code cấu trúc dữ liệu viễn trắc tổng hợp `struct TelemetryPacket`, gom dữ liệu khí áp, quán tính, tọa độ và quản lý tài nguyên vi điều khiển.
 - 📝 **Tổng hợp Lab 4:** Xây dựng thành công hệ sinh thái thu thập dữ liệu đa cảm biến và tải trọng quang học hoàn chỉnh.
 
 ---
